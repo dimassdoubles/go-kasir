@@ -99,3 +99,80 @@ time=2023-05-09T14:47:22+07:00 level=info msg=Starting pool with max connection 
 time=2023-05-09T14:47:22+07:00 level=debug msg=SELECTED products : {}
 time=2023-05-09T14:47:22+07:00 level=debug msg=Init log successfully setup
 time=2023-05-09T14:47:22+07:00 level=debug msg=Transaction error, rolled back : success
+time=2023-05-09T15:54:54+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T15:54:54+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T15:54:54+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T15:54:54+07:00 level=debug msg=Transaction error, rolled back : error add penjualan scany: scan row into struct fields: can't scan into dest[0]: cannot assign 1 into *float64
+time=2023-05-09T15:57:17+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T15:57:17+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T15:57:17+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T15:57:17+07:00 level=debug msg=Add Query : INSERT INTO learn_penjualan ( total_penjualan, total_pembayaran, total_kembalian, create_datetime, update_datetime, create_user_id, update_user_id, version ) VALUES ( :totalPenjualan, :totalPembayaran, :totalKembalian, :datetime , :datetime, :userId, :userId, :version ) RETURNING penjualan_id, total_penjualan, total_pembayaran, total_kembalian, create_datetime, update_datetime, create_user_id, update_user_id, version 
+time=2023-05-09T15:57:17+07:00 level=debug msg=Add Query : [args] {"datetime":"20230509155717","totalKembalian":"80","totalPembayaran":"200","totalPenjualan":"120","userId":-1,"version":0}
+time=2023-05-09T15:57:17+07:00 level=debug msg=Transaction error, rolled back : error add penjualan scany: scan row into struct fields: can't scan into dest[0]: cannot assign 2 into *float64
+time=2023-05-09T15:58:57+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T15:58:57+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T15:58:57+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T15:58:57+07:00 level=debug msg=ADDED penjualan : {
+  "PenjualanId": 3,
+  "TotalKembalian": "80",
+  "TotalPembayaran": "200",
+  "TotalPenjualan": "120",
+  "createDatetime": "20230509155857",
+  "createUserId": -1,
+  "updateDatetime": "20230509155857",
+  "updateUserId": -1,
+  "version": 0
+}
+time=2023-05-09T15:58:57+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T15:58:57+07:00 level=debug msg=Transaction error, rolled back : success
+time=2023-05-09T15:59:45+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T15:59:45+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T15:59:45+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T15:59:45+07:00 level=debug msg=ADDED penjualan : {
+  "PenjualanId": 4,
+  "TotalKembalian": "80",
+  "TotalPembayaran": "200",
+  "TotalPenjualan": "120",
+  "createDatetime": "20230509155945",
+  "createUserId": -1,
+  "updateDatetime": "20230509155945",
+  "updateUserId": -1,
+  "version": 0
+}
+time=2023-05-09T15:59:45+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T15:59:45+07:00 level=debug msg=Transaction error, rolled back : success
+time=2023-05-09T16:27:03+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T16:27:03+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T16:27:03+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T16:27:03+07:00 level=debug msg=Transaction error, rolled back : error add penjualan scany: query one result row: ERROR: syntax error at or near "$5" (SQLSTATE 42601)
+time=2023-05-09T16:27:54+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T16:27:54+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T16:27:54+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T16:27:54+07:00 level=debug msg=Query : INSERT INTO learn_penjualan_item ( penjualan_id, product_id, qty, price, create_datetime, update_datetime, create_user_id, update_user_id, version ) VALUES ( :penjualanId, :productId, :qty, :price :datetime , :datetime, :userId, :userId, :version ) RETURNING penjualan_item_id, penjualan_id, product_id, qty, price, create_datetime, update_datetime, create_user_id, update_user_id, version 
+time=2023-05-09T16:27:54+07:00 level=debug msg=Query : [args] {"datetime":"20230509162754","penjualanId":1,"price":"200","productId":2,"qty":"13","userId":9,"version":0}
+time=2023-05-09T16:27:54+07:00 level=debug msg=Transaction error, rolled back : error add penjualan scany: query one result row: ERROR: syntax error at or near "$5" (SQLSTATE 42601)
+time=2023-05-09T16:29:18+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T16:29:18+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T16:29:18+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T16:29:18+07:00 level=debug msg=Query : INSERT INTO learn_penjualan_item ( penjualan_id, product_id, qty, price, create_datetime, update_datetime, create_user_id, update_user_id, version ) VALUES ( :penjualanId, :productId, :qty, :price :datetime , :datetime, :userId, :userId, :version ) RETURNING penjualan_item_id, penjualan_id, product_id, qty, price, create_datetime, update_datetime, create_user_id, update_user_id, version 
+time=2023-05-09T16:29:18+07:00 level=debug msg=Query : [args] {"datetime":"20230509162918","penjualanId":1,"price":"200","productId":2,"qty":"13","userId":9,"version":0}
+time=2023-05-09T16:29:18+07:00 level=debug msg=Transaction error, rolled back : error add penjualan scany: query one result row: ERROR: syntax error at or near "$5" (SQLSTATE 42601)
+time=2023-05-09T16:37:45+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T16:37:45+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T16:37:45+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T16:37:45+07:00 level=debug msg=Query : INSERT INTO learn_penjualan_item ( penjualan_id, product_id, qty, price, create_datetime, update_datetime, create_user_id, update_user_id, version ) VALUES ( :penjualanId, :productId, :qty, :price, :datetime , :datetime, :userId, :userId, :version ) RETURNING penjualan_item_id, penjualan_id, product_id, qty, price, create_datetime, update_datetime, create_user_id, update_user_id, version 
+time=2023-05-09T16:37:45+07:00 level=debug msg=Query : [args] {"datetime":"20230509163745","penjualanId":1,"price":"200","productId":2,"qty":"13","userId":9,"version":0}
+time=2023-05-09T16:37:45+07:00 level=debug msg=ADDED penjualan item : {
+  "PenjualanId": 1,
+  "PenjualanItemId": 1,
+  "Price": "200",
+  "ProductId": 2,
+  "Qty": "13",
+  "createDatetime": "20230509163745",
+  "createUserId": 9,
+  "updateDatetime": "20230509163745",
+  "updateUserId": 9,
+  "version": 0
+}
+time=2023-05-09T16:37:45+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T16:37:45+07:00 level=debug msg=Transaction error, rolled back : success
