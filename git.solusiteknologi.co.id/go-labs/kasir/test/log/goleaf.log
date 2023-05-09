@@ -77,3 +77,25 @@ time=2023-05-09T13:45:45+07:00 level=debug msg=LOGGEDIN user : {
 }
 time=2023-05-09T13:45:45+07:00 level=debug msg=Init log successfully setup
 time=2023-05-09T13:45:45+07:00 level=debug msg=Transaction error, rolled back : success
+time=2023-05-09T14:42:56+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T14:42:56+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T14:42:56+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T14:42:56+07:00 level=debug msg=Transaction error, rolled back : error login param `result` need to be slice of pointer, ex: `var results []*MyStruct`
+time=2023-05-09T14:43:45+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T14:43:45+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T14:43:45+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T14:43:45+07:00 level=debug msg=Transaction error, rolled back : error get products param `result` need to be slice of pointer, ex: `var results []*MyStruct`
+time=2023-05-09T14:45:12+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T14:45:12+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T14:45:12+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T14:45:12+07:00 level=debug msg=Transaction error, rolled back : error get products scany: scan row into struct fields: can't scan into dest[5]: cannot scan null into *int64
+time=2023-05-09T14:46:24+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T14:46:24+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T14:46:24+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T14:46:24+07:00 level=debug msg=Transaction error, rolled back : error get products scany: scan row into struct fields: can't scan into dest[11]: cannot scan null into *string
+time=2023-05-09T14:47:22+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T14:47:22+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T14:47:22+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T14:47:22+07:00 level=debug msg=SELECTED products : {}
+time=2023-05-09T14:47:22+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T14:47:22+07:00 level=debug msg=Transaction error, rolled back : success
