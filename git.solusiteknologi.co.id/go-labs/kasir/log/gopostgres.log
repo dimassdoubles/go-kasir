@@ -1,0 +1,68 @@
+time=2023-05-09T13:42:31+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T13:42:31+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T13:42:31+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T13:42:42+07:00 level=debug msg=QUERY login user: SELECT * FROM learn_user WHERE username=:username AND password=:password 
+time=2023-05-09T13:42:42+07:00 level=debug msg=QUERY login user: [args] {"password":"123","username":"sts"}
+time=2023-05-09T13:46:28+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T13:46:28+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T13:46:28+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T13:46:35+07:00 level=debug msg=QUERY login user: SELECT * FROM learn_user WHERE username=:username AND password=:password 
+time=2023-05-09T13:46:35+07:00 level=debug msg=QUERY login user: [args] {"password":"sts123","username":"sts"}
+time=2023-05-09T13:49:27+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T13:49:27+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T13:49:27+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T13:49:30+07:00 level=debug msg=QUERY login user: SELECT * FROM learn_user WHERE username=:username AND password=:password 
+time=2023-05-09T13:49:30+07:00 level=debug msg=QUERY login user: [args] {"password":"123","username":"sts"}
+time=2023-05-09T13:52:08+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T13:52:08+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T13:52:08+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T13:52:12+07:00 level=debug msg=QUERY login user: SELECT * FROM learn_user WHERE username=:username AND password=:password 
+time=2023-05-09T13:52:12+07:00 level=debug msg=QUERY login user: [args] {"password":"123","username":"dimas"}
+time=2023-05-09T13:52:32+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T13:52:32+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T13:52:32+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T13:52:35+07:00 level=debug msg=QUERY login user: SELECT * FROM learn_user WHERE username=:username AND password=:password 
+time=2023-05-09T13:52:35+07:00 level=debug msg=QUERY login user: [args] {"password":"123","username":"sts"}
+time=2023-05-09T13:53:06+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T13:53:06+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T13:53:06+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T13:53:10+07:00 level=debug msg=QUERY login user: SELECT * FROM learn_user WHERE username=:username AND password=:password 
+time=2023-05-09T13:53:10+07:00 level=debug msg=QUERY login user: [args] {"password":"1234","username":"sts"}
+time=2023-05-09T13:53:54+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T13:53:54+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T13:53:54+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T13:53:58+07:00 level=debug msg=QUERY login user: SELECT * FROM learn_user WHERE username=:username AND password=:password 
+time=2023-05-09T13:53:58+07:00 level=debug msg=QUERY login user: [args] {"password":"sts123","username":"sts"}
+time=2023-05-09T13:55:32+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T13:55:32+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T13:55:32+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T13:55:34+07:00 level=debug msg=QUERY login user: SELECT * FROM learn_user WHERE username=:username AND password=:password 
+time=2023-05-09T13:55:34+07:00 level=debug msg=QUERY login user: [args] {"password":"das","username":"asd"}
+time=2023-05-09T14:06:35+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T14:06:35+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T14:06:35+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T14:06:39+07:00 level=debug msg=QUERY login user: SELECT * FROM learn_user WHERE username=:username AND password=:password 
+time=2023-05-09T14:06:39+07:00 level=debug msg=QUERY login user: [args] {"password":"sts123","username":"sts"}
+time=2023-05-09T14:07:22+07:00 level=debug msg=QUERY login user: SELECT * FROM learn_user WHERE username=:username AND password=:password 
+time=2023-05-09T14:07:22+07:00 level=debug msg=QUERY login user: [args] {"password":"123","username":"dimassdoubles"}
+time=2023-05-09T14:08:45+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T14:08:45+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T14:08:45+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T14:08:48+07:00 level=debug msg=QUERY login user: SELECT * FROM learn_user WHERE username=:username AND password=:password 
+time=2023-05-09T14:08:48+07:00 level=debug msg=QUERY login user: [args] {"password":"sts","username":"sts"}
+time=2023-05-09T14:12:21+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T14:12:21+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T14:12:21+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T14:12:25+07:00 level=debug msg=QUERY login user: SELECT * FROM learn_user WHERE username=:username AND password=:password 
+time=2023-05-09T14:12:25+07:00 level=debug msg=QUERY login user: [args] {"password":"sts","username":"sts"}
+time=2023-05-09T14:13:10+07:00 level=debug msg=QUERY login user: SELECT * FROM learn_user WHERE username=:username AND password=:password 
+time=2023-05-09T14:13:10+07:00 level=debug msg=QUERY login user: [args] {"password":"sts123","username":"sts"}
+time=2023-05-09T14:13:47+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T14:13:47+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T14:13:47+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T14:14:52+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T14:14:52+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T14:14:52+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T14:17:13+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T14:17:13+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T14:17:13+07:00 level=info msg=Starting pool with max connection  1

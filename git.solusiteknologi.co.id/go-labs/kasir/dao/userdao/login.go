@@ -23,8 +23,7 @@ func Login(input InputLogin) (*tables.LearnUser, error) {
 		Add("WHERE username=:username ").
 		Add("AND password=:password ").
 		SetParam("username", input.Username).
-		SetParam("password", input.Password).
-		Log("QUERY login user: "),
+		SetParam("password", input.Password),
 		&result)
 
 	if err != nil {

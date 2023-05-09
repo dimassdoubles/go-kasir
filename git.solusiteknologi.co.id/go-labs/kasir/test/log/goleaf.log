@@ -51,3 +51,29 @@ time=2023-05-09T12:04:40+07:00 level=debug msg=LOGGEDIN user : {
 }
 time=2023-05-09T12:04:40+07:00 level=debug msg=Init log successfully setup
 time=2023-05-09T12:04:40+07:00 level=debug msg=Transaction error, rolled back : success
+time=2023-05-09T13:44:36+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T13:44:36+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T13:44:36+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T13:44:36+07:00 level=debug msg=QUERY login user: SELECT * FROM learn_user WHERE username=:username AND password=:password 
+time=2023-05-09T13:44:36+07:00 level=debug msg=QUERY login user: [args] {"password":"sts123","username":"sts1"}
+time=2023-05-09T13:44:36+07:00 level=debug msg=Transaction error, rolled back : error login no rows in result set
+time=2023-05-09T13:45:45+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T13:45:45+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T13:45:45+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T13:45:45+07:00 level=debug msg=QUERY login user: SELECT * FROM learn_user WHERE username=:username AND password=:password 
+time=2023-05-09T13:45:45+07:00 level=debug msg=QUERY login user: [args] {"password":"sts123","username":"sts"}
+time=2023-05-09T13:45:45+07:00 level=debug msg=LOGGEDIN user : {
+  "Password": "sts123",
+  "UserId": 2,
+  "Username": "sts",
+  "active": "Y",
+  "activeDatetime": "202305091019",
+  "createDatetime": "202305091019",
+  "createUserId": -99,
+  "nonActiveDatetime": "202305091019",
+  "updateDatetime": "202305091019",
+  "updateUserId": -99,
+  "version": 0
+}
+time=2023-05-09T13:45:45+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T13:45:45+07:00 level=debug msg=Transaction error, rolled back : success
