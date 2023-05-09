@@ -23,7 +23,6 @@ func TestAddPenjualanItem(t *testing.T) {
 			Price:         decimal.NewFromInt(200),
 			AuditUserId:   9,
 			AuditDatetime: glutil.DateTimeNow(),
-			Version:       0,
 		})
 
 		if err != nil {

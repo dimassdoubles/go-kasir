@@ -18,7 +18,6 @@ type InputAdd struct {
 	Price         decimal.Decimal
 	AuditUserId   int64
 	AuditDatetime string
-	Version       int64
 }
 
 func Add(input InputAdd) (*tables.LearnPenjualanItem, error) {

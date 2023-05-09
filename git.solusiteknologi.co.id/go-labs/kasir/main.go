@@ -28,12 +28,12 @@ func main() {
 		PoolMinConnection: 1,
 	})
 
-	err := gldb.BeginTrx(func(trx pgx.Tx) error {
-		cashier := &cashier.Cashier{
-			Tx: trx,
-		}
+	for {
+		err := gldb.BeginTrx(func(trx pgx.Tx) error {
+			cashier := &cashier.Cashier{
+				Tx: trx,
+			}
 
-		for {
 			err := cashier.Start()
 			if err != nil {
 				fmt.Println(err)
@@ -41,11 +41,14 @@ func main() {
 
 			fmt.Println()
 			fmt.Println()
+
+			return nil
+
+		})
+
+		if err != nil {
+			logrus.Debug("Error connection occured : ", err)
 		}
-
-	})
-
-	if err != nil {
-		logrus.Debug("Error connection occured : ", err)
 	}
+
 }
