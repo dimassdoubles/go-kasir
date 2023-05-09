@@ -1,0 +1,53 @@
+time=2023-05-09T11:54:30+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T11:54:30+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/erp_cloud?pool_max_conns=5&pool_min_conns=1&application_name=GoleafApp
+time=2023-05-09T11:54:30+07:00 level=fatal msg=Database connection error
+time=2023-05-09T11:56:49+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T11:56:49+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T11:56:49+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T11:56:49+07:00 level=debug msg=Transaction error, rolled back : error login params.not.set: username, password
+time=2023-05-09T11:58:45+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T11:58:45+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T11:58:45+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T11:58:45+07:00 level=debug msg=Transaction error, rolled back : error login params.not.set: username, password
+time=2023-05-09T12:01:22+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T12:01:22+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T12:01:22+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T12:01:22+07:00 level=debug msg=QUERY login user: 		SELECT * FROM learn_user		WHERE username=:username		AND password=:password
+time=2023-05-09T12:01:22+07:00 level=debug msg=QUERY login user: [args] {"password":"sts123","username":"sts"}
+time=2023-05-09T12:01:22+07:00 level=debug msg=Transaction error, rolled back : error login no rows in result set
+time=2023-05-09T12:02:14+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T12:02:14+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T12:02:14+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T12:02:14+07:00 level=debug msg=Transaction error, rolled back : error login params.not.set: usernameAND
+time=2023-05-09T12:02:37+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T12:02:37+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T12:02:38+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T12:02:38+07:00 level=debug msg=QUERY login user: SELECT * FROM learn_user WHERE username=:username AND password=:password 
+time=2023-05-09T12:02:38+07:00 level=debug msg=QUERY login user: [args] {"password":"sts123","username":"sts"}
+time=2023-05-09T12:02:38+07:00 level=debug msg=Transaction error, rolled back : error login no rows in result set
+time=2023-05-09T12:03:24+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T12:03:24+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T12:03:24+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T12:03:24+07:00 level=debug msg=QUERY login user: SELECT * FROM learn_user WHERE username=:username AND password=:password 
+time=2023-05-09T12:03:24+07:00 level=debug msg=QUERY login user: [args] {"password":"sts123","username":"sts"}
+time=2023-05-09T12:03:24+07:00 level=debug msg=Transaction error, rolled back : error login scany: scan row into struct fields: can't scan into dest[4]: cannot scan null into *int64
+time=2023-05-09T12:04:40+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T12:04:40+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T12:04:40+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T12:04:40+07:00 level=debug msg=QUERY login user: SELECT * FROM learn_user WHERE username=:username AND password=:password 
+time=2023-05-09T12:04:40+07:00 level=debug msg=QUERY login user: [args] {"password":"sts123","username":"sts"}
+time=2023-05-09T12:04:40+07:00 level=debug msg=LOGGEDIN user : {
+  "Password": "sts123",
+  "UserId": 2,
+  "Username": "sts",
+  "active": "Y",
+  "activeDatetime": "202305091019",
+  "createDatetime": "202305091019",
+  "createUserId": -99,
+  "nonActiveDatetime": "202305091019",
+  "updateDatetime": "202305091019",
+  "updateUserId": -99,
+  "version": 0
+}
+time=2023-05-09T12:04:40+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T12:04:40+07:00 level=debug msg=Transaction error, rolled back : success
