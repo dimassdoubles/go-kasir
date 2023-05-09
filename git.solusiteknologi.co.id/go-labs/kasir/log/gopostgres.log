@@ -66,3 +66,15 @@ time=2023-05-09T14:14:52+07:00 level=info msg=Starting pool with max connection 
 time=2023-05-09T14:17:13+07:00 level=debug msg=Init log successfully setup
 time=2023-05-09T14:17:13+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
 time=2023-05-09T14:17:13+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T15:07:28+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T15:07:28+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T15:07:28+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T15:08:11+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T15:08:11+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T15:08:11+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T15:08:26+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T15:08:26+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T15:08:26+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T15:09:14+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T15:09:14+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T15:09:14+07:00 level=info msg=Starting pool with max connection  1

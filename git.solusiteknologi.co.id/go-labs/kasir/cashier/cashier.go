@@ -31,7 +31,12 @@ func (c *Cashier) Start() error {
 		return err
 	}
 
-	fmt.Println(option)
+	cstmutil.GiveSomeSpace()
+	err = c.processMenu(option)
+	if err != nil {
+		cstmutil.GiveSomeSpace()
+		return err
+	}
 	return nil
 }
 
@@ -87,8 +92,49 @@ func (c Cashier) selectMenu() (string, error) {
 
 	_, err := fmt.Scanln(&option)
 	if err != nil {
+		cstmutil.GiveSomeSpace()
 		fmt.Println(err)
+		cstmutil.GiveSomeSpace()
+		return c.selectMenu()
+	} else {
+		option = strings.TrimSpace(option)
+		if isValidOption(option) {
+			return option, nil
+		}
+		cstmutil.GiveSomeSpace()
+		fmt.Println(errormsg.PILIHAN_TIDAK_DAPAT_DIPROSES)
+		cstmutil.GiveSomeSpace()
+		return c.selectMenu()
+	}
+}
+
+func isValidOption(option string) bool {
+	options := []string{"1", "2", "3", "4", "5"}
+
+	for _, v := range options {
+		if v == option {
+			return true
+		}
 	}
 
-	return option, nil
+	return false
+}
+
+func (c Cashier) processMenu(option string) error {
+	switch option {
+	case "1":
+		fmt.Println("penjualan barang")
+	case "2":
+		fmt.Println("lihat barang")
+	case "3":
+		fmt.Println("tambah barang")
+	case "4":
+		fmt.Println("riwayat penjualan")
+	case "5":
+		fmt.Println("logout")
+	default:
+		fmt.Println(errormsg.PILIHAN_TIDAK_DAPAT_DIPROSES)
+	}
+
+	return nil
 }
