@@ -18,15 +18,17 @@ import (
 )
 
 type Cashier struct {
-	user tables.LearnUser
+	user *tables.LearnUser
 	Tx   pgx.Tx
 }
 
 func (c *Cashier) Start() error {
-	err := c.login()
-	if err != nil {
-		cstmutil.GiveSomeSpace()
-		return err
+	if c.user == nil {
+		err := c.login()
+		if err != nil {
+			cstmutil.GiveSomeSpace()
+			return err
+		}
 	}
 
 	cstmutil.GiveSomeSpace()
@@ -79,7 +81,7 @@ func (c *Cashier) login() error {
 		return errors.New(errormsg.GAGAL_LOGIN)
 	}
 
-	c.user = *user
+	c.user = user
 	return nil
 }
 
@@ -124,7 +126,7 @@ func isValidOption(option string) bool {
 	return false
 }
 
-func (c Cashier) processMenu(option string) error {
+func (c *Cashier) processMenu(option string) error {
 	switch option {
 	case "1":
 		c.doPenjualan()
@@ -133,12 +135,16 @@ func (c Cashier) processMenu(option string) error {
 	case "3":
 		c.doLihatRiwayatPenjualan()
 	case "4":
-		fmt.Println("riwayat penjualan")
+		c.doLogout()
 	default:
 		fmt.Println(errormsg.PILIHAN_TIDAK_DAPAT_DIPROSES)
 	}
 
 	return nil
+}
+
+func (c *Cashier) doLogout() {
+	c.user = nil
 }
 
 func (c Cashier) doPenjualan() error {
@@ -380,7 +386,7 @@ func (c Cashier) doLihatBarang() error {
 
 func isAddNewProduct() bool {
 	var option string
-	fmt.Print("Tambah Baru? Y / N : ")
+	fmt.Print("\nTambah Baru? Y / N : ")
 	_, err := fmt.Scanln(&option)
 
 	if err == nil {
@@ -478,6 +484,10 @@ func inputHargaBarang() decimal.Decimal {
 }
 
 func (c Cashier) doLihatRiwayatPenjualan() error {
+	cstmutil.GiveSomeSpace()
+	fmt.Println("=============================")
+	fmt.Println("** Menu Riwayat Penjualan **")
+	fmt.Println("—----------------------------")
 	penjualans, err := penjualandao.GetPenjualans(penjualandao.InputGet{Tx: c.Tx})
 
 	if err != nil {

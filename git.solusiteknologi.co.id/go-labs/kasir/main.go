@@ -28,11 +28,11 @@ func main() {
 		PoolMinConnection: 1,
 	})
 
+	cashier := &cashier.Cashier{}
+
 	for {
 		err := gldb.BeginTrx(func(trx pgx.Tx) error {
-			cashier := &cashier.Cashier{
-				Tx: trx,
-			}
+			cashier.Tx = trx
 
 			err := cashier.Start()
 			if err != nil {
