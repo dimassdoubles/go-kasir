@@ -176,3 +176,30 @@ time=2023-05-09T16:37:45+07:00 level=debug msg=ADDED penjualan item : {
 }
 time=2023-05-09T16:37:45+07:00 level=debug msg=Init log successfully setup
 time=2023-05-09T16:37:45+07:00 level=debug msg=Transaction error, rolled back : success
+time=2023-05-10T09:33:57+07:00 level=debug msg=Init log successfully setup
+time=2023-05-10T09:33:57+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-10T09:33:57+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-10T09:33:57+07:00 level=debug msg=Transaction error, rolled back : error add product scany: query one result row: ERROR: syntax error at or near "$4" (SQLSTATE 42601)
+time=2023-05-10T09:35:00+07:00 level=debug msg=Init log successfully setup
+time=2023-05-10T09:35:00+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-10T09:35:00+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-10T09:35:00+07:00 level=debug msg=Transaction error, rolled back : error add product scany: query one result row: ERROR: column "pricecreate_datetime" does not exist (SQLSTATE 42703)
+time=2023-05-10T09:35:22+07:00 level=debug msg=Init log successfully setup
+time=2023-05-10T09:35:22+07:00 level=debug msg=Connecting to database postgresql://sts:*****@172.17.0.1:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-10T09:35:22+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-10T09:35:22+07:00 level=debug msg=ADDED product : {
+  "Price": "3000",
+  "ProductCode": "P1111",
+  "ProductId": 11,
+  "ProductName": "Indomie Rendang",
+  "active": "Y",
+  "activeDatetime": "20230510093522",
+  "createDatetime": "20230510093522",
+  "createUserId": 1,
+  "nonActiveDatetime": "",
+  "updateDatetime": "20230510093522",
+  "updateUserId": 1,
+  "version": 0
+}
+time=2023-05-10T09:35:22+07:00 level=debug msg=Init log successfully setup
+time=2023-05-10T09:35:22+07:00 level=debug msg=Transaction error, rolled back : success

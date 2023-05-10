@@ -130,13 +130,11 @@ func (c Cashier) processMenu(option string) error {
 	case "1":
 		c.doPenjualan()
 	case "2":
-		fmt.Println("lihat barang")
+		c.doLihatBarang()
 	case "3":
-		fmt.Println("tambah barang")
+		fmt.Println("riwayat penjualan")
 	case "4":
 		fmt.Println("riwayat penjualan")
-	case "5":
-		fmt.Println("logout")
 	default:
 		fmt.Println(errormsg.PILIHAN_TIDAK_DAPAT_DIPROSES)
 	}
@@ -357,4 +355,125 @@ func inputQty() decimal.Decimal {
 	}
 
 	return decimal.NewFromInt(qty)
+}
+
+func (c Cashier) doLihatBarang() error {
+	cstmutil.GiveSomeSpace()
+	fmt.Println("=============================")
+	fmt.Println("** Menu Lihat Barang **")
+	fmt.Println("—----------------------------")
+
+	learnProducts, err := productdao.GetProducts(productdao.InputGetProducts{
+		Tx: c.Tx,
+	})
+
+	if err != nil {
+		return err
+	}
+
+	showProduct(learnProducts)
+
+	c.doAddNewProduct()
+
+	return nil
+
+}
+
+func isAddNewProduct() bool {
+	var option string
+	fmt.Print("Tambah Baru? Y / N : ")
+	_, err := fmt.Scanln(&option)
+
+	if err == nil {
+		if strings.TrimSpace(option) == "Y" {
+			return true
+		}
+	}
+
+	return false
+}
+
+func (c Cashier) doAddNewProduct() error {
+	products := []*tables.LearnProduct{}
+
+	for isAddNewProduct() {
+		product, err := productdao.Add(productdao.InputAdd{
+			Tx:            c.Tx,
+			ProductCode:   inputKodeBarang(),
+			ProductName:   inputNamaBarang(),
+			Price:         inputHargaBarang(),
+			AuditDatetime: glutil.DateTimeNow(),
+			AuditUserId:   c.user.UserId,
+		})
+
+		if err != nil {
+			cstmutil.GiveSomeSpace()
+			fmt.Println(errormsg.GAGAL_TAMBAH_PRODUK)
+			continue
+		}
+
+		products = append(products, product)
+
+		cstmutil.GiveSomeSpace()
+		fmt.Println("Barang Sukses Ditambahkan")
+		showProduct(products)
+
+	}
+
+	return nil
+}
+
+func inputKodeBarang() string {
+	cstmutil.GiveSomeSpace()
+	var kodeBarang string
+	fmt.Print("Masukkan Kode Barang  : ")
+	_, err := fmt.Scan(&kodeBarang)
+	if err != nil {
+		cstmutil.GiveSomeSpace()
+		fmt.Println(err)
+		return inputKodeBarang()
+	}
+
+	if len(kodeBarang) > 4 || len(kodeBarang) < 4 {
+		cstmutil.GiveSomeSpace()
+		fmt.Println(errormsg.KODE_BARANG_TIDAK_VALID)
+		return inputKodeBarang()
+	}
+
+	return kodeBarang
+
+}
+
+func inputNamaBarang() string {
+	var namaBarang string
+	fmt.Print("Masukkan Nama Barang  : ")
+	_, err := fmt.Scan(&namaBarang)
+	if err != nil {
+		cstmutil.GiveSomeSpace()
+		fmt.Println(err)
+		return inputNamaBarang()
+	}
+
+	return namaBarang
+
+}
+
+func inputHargaBarang() decimal.Decimal {
+	var hargaBarang int64
+	fmt.Print("Masukkan Harga Barang : ")
+	_, err := fmt.Scan(&hargaBarang)
+	if err != nil {
+		cstmutil.GiveSomeSpace()
+		fmt.Println(err)
+		return inputHargaBarang()
+	}
+
+	if hargaBarang <= 0 {
+		cstmutil.GiveSomeSpace()
+		fmt.Println(errormsg.MINIMAL_JUMLAH_1)
+		return inputHargaBarang()
+	}
+
+	return decimal.NewFromInt(hargaBarang)
+
 }

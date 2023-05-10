@@ -165,3 +165,18 @@ time=2023-05-09T18:48:30+07:00 level=info msg=Starting pool with max connection 
 time=2023-05-09T18:53:51+07:00 level=debug msg=Init log successfully setup
 time=2023-05-09T18:53:51+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
 time=2023-05-09T18:53:51+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-09T19:01:57+07:00 level=debug msg=Init log successfully setup
+time=2023-05-09T19:01:57+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-09T19:01:57+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-10T08:54:08+07:00 level=debug msg=Init log successfully setup
+time=2023-05-10T08:54:08+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-10T08:54:08+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-10T09:46:43+07:00 level=debug msg=Init log successfully setup
+time=2023-05-10T09:46:43+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-10T09:46:43+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-10T09:47:43+07:00 level=debug msg=Init log successfully setup
+time=2023-05-10T09:47:43+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-10T09:47:43+07:00 level=info msg=Starting pool with max connection  1
+time=2023-05-10T09:49:22+07:00 level=debug msg=Init log successfully setup
+time=2023-05-10T09:49:22+07:00 level=debug msg=Connecting to database postgresql://sts:*****@localhost:5432/go_kasir?pool_max_conns=1&pool_min_conns=1&application_name=GoKasir
+time=2023-05-10T09:49:22+07:00 level=info msg=Starting pool with max connection  1
