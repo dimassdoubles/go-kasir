@@ -1,8 +1,10 @@
 package cashier
 
 import (
+	"bufio"
 	"errors"
 	"fmt"
+	"os"
 	"strings"
 
 	"git.solusiteknologi.co.id/go-labs/kasir/cstmutil"
@@ -452,15 +454,17 @@ func inputKodeBarang() string {
 func inputNamaBarang() string {
 	var namaBarang string
 	fmt.Print("Masukkan Nama Barang  : ")
-	_, err := fmt.Scan(&namaBarang)
-	if err != nil {
+	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Scan()
+	namaBarang = scanner.Text()
+
+	if err := scanner.Err(); err != nil {
 		cstmutil.GiveSomeSpace()
 		fmt.Println(err)
 		return inputNamaBarang()
 	}
 
 	return namaBarang
-
 }
 
 func inputHargaBarang() decimal.Decimal {
