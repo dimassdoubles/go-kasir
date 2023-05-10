@@ -89,11 +89,10 @@ func (c Cashier) selectMenu() (string, error) {
 	fmt.Println("Silakan pilih menu")
 	fmt.Println("1. Penjualan Barang")
 	fmt.Println("2. Lihat Barang")
-	fmt.Println("3. Tambah Barang")
-	fmt.Println("4. Riwayat Penjualan")
-	fmt.Println("5. Logout")
+	fmt.Println("3. Riwayat Penjualan")
+	fmt.Println("4. Logout")
 	fmt.Println()
-	fmt.Print("Input pilihan 1 - 3 : ")
+	fmt.Print("Input pilihan 1 - 4 : ")
 
 	_, err := fmt.Scanln(&option)
 	if err != nil {
@@ -114,7 +113,7 @@ func (c Cashier) selectMenu() (string, error) {
 }
 
 func isValidOption(option string) bool {
-	options := []string{"1", "2", "3", "4", "5"}
+	options := []string{"1", "2", "3", "4"}
 
 	for _, v := range options {
 		if v == option {
@@ -132,7 +131,7 @@ func (c Cashier) processMenu(option string) error {
 	case "2":
 		c.doLihatBarang()
 	case "3":
-		fmt.Println("riwayat penjualan")
+		c.doLihatRiwayatPenjualan()
 	case "4":
 		fmt.Println("riwayat penjualan")
 	default:
@@ -476,4 +475,44 @@ func inputHargaBarang() decimal.Decimal {
 
 	return decimal.NewFromInt(hargaBarang)
 
+}
+
+func (c Cashier) doLihatRiwayatPenjualan() error {
+	penjualans, err := penjualandao.GetPenjualans(penjualandao.InputGet{Tx: c.Tx})
+
+	if err != nil {
+		fmt.Println(err)
+		return err
+	}
+
+	for i, v := range penjualans {
+		fmt.Println(i+1, ".", glutil.DisplayDatetimeLt(v.CreateDatetime), "Total penjualan : ", v.TotalPenjualan)
+		penjualanItems, err := penjualanitemdao.GetPjItemByPjId(penjualanitemdao.InputGetPjItemByPjId{
+			Tx:          c.Tx,
+			PenjualanId: v.PenjualanId,
+		})
+
+		if err != nil {
+			fmt.Println(err)
+			continue
+		}
+
+		for j, x := range penjualanItems {
+			product, err := productdao.GetProductById(productdao.InputGetProductById{
+				Tx:        c.Tx,
+				ProductId: x.ProductId,
+			})
+
+			if err != nil {
+				fmt.Println(err)
+				continue
+			}
+
+			fmt.Println("   ", j+1, ".", product.ProductName, x.Qty, "x", x.Price, " (", x.Qty.Mul(x.Price), ")")
+		}
+
+		fmt.Println()
+	}
+
+	return nil
 }
